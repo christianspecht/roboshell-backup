@@ -17,5 +17,5 @@ foreach ($node in $config.copy.sourcefolder)
 {
     $from = $node.from
     $to = $nasfolder + $node.to   
-    robocopy.exe "$from" "$to" *.* /mir /xj
+    robocopy.exe "$from" "$to" *.* /mir /xj /fft
 }
