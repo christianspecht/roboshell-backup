@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<copy>
+
+	<!-- NAS drive letter (with backslash!) -->
+	<nasdrive value="Z:\"/>
+
+	<!-- Destination folder on NAS (with backslash!) -->
+	<nasfolder value="Backup\MyComputer\"/>
+
+	<!-- List of folders to be copied from local machine to NAS -->
+	<!-- One line per folder -->
+	<!-- "from": complete path on local machine -->
+	<!-- "to": name of destination folder (subfolder of "nasfolder", see above) -->
+	<sourcefolder from="C:\MyDocuments" to="MyDocuments"/>
+  
+</copy>
