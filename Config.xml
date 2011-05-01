@@ -12,5 +12,8 @@
 	<!-- "from": complete path on local machine -->
 	<!-- "to": name of destination folder (subfolder of "nasfolder", see above) -->
 	<sourcefolder from="C:\MyDocuments" to="MyDocuments"/>
+	
+	<!-- wait time (in seconds) after info messages -->
+	<waittime value="5"/>
   
 </copy>
