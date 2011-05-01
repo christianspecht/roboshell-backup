@@ -13,6 +13,9 @@
 	<!-- "to": name of destination folder (subfolder of "nasfolder", see above) -->
 	<sourcefolder from="C:\MyDocuments" to="MyDocuments"/>
 	
+	<!-- USB device drive letter (with backslash!) -->
+	<usbdrive value="E:\"/>
+	
 	<!-- wait time (in seconds) after info messages -->
 	<waittime value="5"/>
   
