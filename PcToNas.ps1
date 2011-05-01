@@ -4,6 +4,20 @@ $nasdrive = $config.copy.nasdrive.value
 $nasfolder = $nasdrive + $config.copy.nasfolder.value
 $waittime = $config.copy.waittime.value
 
+if (!(test-path $nasdrive))
+{
+	write-host "##########################################################"
+	write-host "#"
+	write-host "#  NAS drive $nasdrive does not exist!"
+	write-host "#  Backup to NAS will not run!"
+	write-host "#"
+	write-host "#  This window will close in $waittime seconds!"
+	write-host "#"
+	write-host "##########################################################"
+	start-sleep -s $waittime
+	break
+}
+
 write-host "##########################################################"
 write-host "#"
 write-host "#  Backup from local machine to NAS"
