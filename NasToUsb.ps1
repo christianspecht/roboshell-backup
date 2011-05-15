@@ -43,8 +43,8 @@ write-host "#  USB drive destination folder:  $usbfolder"
 write-host "#"
 write-host "##########################################################"
 write-host ""
-read-host "Press Enter to start!"
+read-host "Press Enter to start"
 
 robocopy.exe "$nasdrive" "$usbfolder" *.* /mir /fft
 
-read-host "Press Enter to exit!"
+read-host "Press Enter to exit"
