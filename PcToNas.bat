@@ -1,2 +1,2 @@
 @echo off
-powershell.exe .\pctonas.ps1
+powershell.exe -ExecutionPolicy unrestricted .\pctonas.ps1

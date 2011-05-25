@@ -1,2 +1,2 @@
 @echo off
-powershell.exe .\nastousb.ps1
+powershell.exe -ExecutionPolicy unrestricted .\nastousb.ps1
