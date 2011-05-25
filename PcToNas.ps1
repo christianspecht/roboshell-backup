@@ -18,6 +18,41 @@ if (!(test-path $nasdrive))
 	break
 }
 
+$numerrors = 0
+
+foreach ($node in $config.copy.sourcefolder)
+{
+    $folder = $node.from
+
+	if (!(test-path $folder))
+	{
+		if ($numerrors -eq 0)
+		{
+			write-host "##########################################################"
+			write-host "#"
+			write-host "#  Missing source folder(s)!"
+			write-host "#  The following source folders do not exist:"
+			write-host "#"
+		}
+	
+		write-host "#  $folder"
+		
+		$numerrors++
+	}
+}
+
+if ($numerrors -gt 0)
+{
+	write-host "#"
+	write-host "#  Backup to NAS will not run!"
+	write-host "#"
+	write-host "#  This window will close in $waittime seconds!"
+	write-host "#"
+	write-host "##########################################################"
+	start-sleep -s $waittime
+	break
+}
+
 write-host "##########################################################"
 write-host "#"
 write-host "#  Backup from local machine to NAS"
