@@ -6,16 +6,16 @@ It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy fi
 ## What does it do?
 
 RoboShell Backup works best if you have the following setup:
-* Several computers, and on each one is local data that needs to be backed up regularly.
-* A NAS drive to which you can copy the local data from all your computers.
-* One or more external USB drives to take backups of your whole NAS drive.
+- Several computers, and on each one is local data that needs to be backed up regularly.
+- A NAS drive to which you can copy the local data from all your computers.
+- One or more external USB drives to take backups of your whole NAS drive.
 
 If your setup looks like this, then RoboShell Backup is for you: It helps you automate the copying stuff.
 
 RoboShell Backup consists of two batch files:
 
-* PcToNas.bat copies folders from your local machine to a NAS drive.
-* NasToUsb.bat backups the whole NAS drive to an external USB disk.
+- PcToNas.bat copies folders from your local machine to a NAS drive.
+- NasToUsb.bat backups the whole NAS drive to an external USB disk.
 
 There is a config file in which you can specify the local folders to be backed up, and the drive letters of the NAS and USB drives.
 
