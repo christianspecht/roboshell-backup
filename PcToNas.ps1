@@ -4,14 +4,16 @@ $nasdrive = $config.copy.nasdrive.value
 $nasfolder = $nasdrive + $config.copy.nasfolder.value
 $waittime = $config.copy.waittime.value
 
+Import-LocalizedData -BindingVariable msg -FileName messages.psd1
+
 if (!(test-path $nasdrive))
 {
 	"##########################################################"
 	"#"
-	"#  NAS drive {0} does not exist!" -f $nasdrive
-	"#  Backup to NAS will not run!"
+	"#  " + $msg.noNasDrive -f $nasdrive
+	"#  " + $msg.noBackupN
 	"#"
-	"#  This window will close in {0} seconds!" -f $waittime
+	"#  " + $msg.windowClose -f $waittime
 	"#"
 	"##########################################################"
 	start-sleep -s $waittime
@@ -30,8 +32,8 @@ foreach ($node in $config.copy.sourcefolder)
 		{
 			"##########################################################"
 			"#"
-			"#  Missing source folder(s)!"
-			"#  The following source folders do not exist:"
+			"#  " + $msg.missingFolders1
+			"#  " + $msg.missingFolders2
 			"#"
 		}
 	
@@ -44,9 +46,9 @@ foreach ($node in $config.copy.sourcefolder)
 if ($numerrors -gt 0)
 {
 	"#"
-	"#  Backup to NAS will not run!"
+	"#  " + $msg.noBackupN
 	"#"
-	"#  This window will close in {0} seconds!" -f $waittime
+	"#  " + $msg.windowClose -f $waittime
 	"#"
 	"##########################################################"
 	start-sleep -s $waittime
@@ -55,12 +57,12 @@ if ($numerrors -gt 0)
 
 "##########################################################"
 "#"
-"#  Backup from local machine to NAS"
+"#  " + $msg.backupStartN1
 "#"
-"#  Folders will be backed up to:"
+"#  " + $msg.backupStartN2
 "#  $nasfolder"
 "#"
-"#  Backup will start in {0} seconds!" -f $waittime
+"#  " + $msg.backupStartN3 -f $waittime
 "#"
 "##########################################################"
 ""

@@ -4,14 +4,16 @@ $nasdrive = $config.copy.nasdrive.value
 $usbdrive = $config.copy.usbdrive.value
 $waittime = $config.copy.waittime.value
 
+Import-LocalizedData -BindingVariable msg -FileName messages.psd1
+
 if (!(test-path $nasdrive))
 {
 	"##########################################################"
 	"#"
-	"#  NAS drive {0} does not exist!" -f $nasdrive
-	"#  Backup to external USB drive will not run!"
+	"#  " + $msg.noNasDrive -f $nasdrive
+	"#  " + $msg.noBackupU
 	"#"
-	"#  This window will close in {0} seconds!" -f $waittime
+	"#  " + $msg.windowClose -f $waittime
 	"#"
 	"##########################################################"
 	start-sleep -s $waittime
@@ -22,10 +24,10 @@ if (!(test-path $usbdrive))
 {
 	"##########################################################"
 	"#"
-	"#  USB drive {0} does not exist!" -f $usbdrive
-	"#  Backup to external USB drive will not run!"
+	"#  " + $msg.noUsbDrive -f $usbdrive
+	"#  " + $msg.noBackupU
 	"#"
-	"#  This window will close in {0} seconds!" -f $waittime
+	"#  " + $msg.windowClose -f $waittime
 	"#"
 	"##########################################################"
 	start-sleep -s $waittime
@@ -36,15 +38,15 @@ $usbfolder = $usbdrive + "Backup_NAS"
 
 "##########################################################"
 "#"
-"#  Backup from NAS to external USB drive"
+"#  " + $msg.backupStartU1
 "#"
-"#  NAS drive letter:              {0}" -f $nasdrive
-"#  USB drive destination folder:  {0}" -f $usbfolder
+"#  " + $msg.backupStartU2 -f $nasdrive
+"#  " + $msg.backupStartU3 -f $usbfolder
 "#"
 "##########################################################"
 ""
-read-host "Press Enter to start"
+read-host $msg.pressEnter1
 
 robocopy.exe "$nasdrive" "$usbfolder" *.* /mir /fft
 
-read-host "Press Enter to exit"
+read-host $msg.pressEnter2
