@@ -6,14 +6,14 @@ $waittime = $config.copy.waittime.value
 
 if (!(test-path $nasdrive))
 {
-	write-host "##########################################################"
-	write-host "#"
-	write-host "#  NAS drive $nasdrive does not exist!"
-	write-host "#  Backup to NAS will not run!"
-	write-host "#"
-	write-host "#  This window will close in $waittime seconds!"
-	write-host "#"
-	write-host "##########################################################"
+	"##########################################################"
+	"#"
+	"#  NAS drive {0} does not exist!" -f $nasdrive
+	"#  Backup to NAS will not run!"
+	"#"
+	"#  This window will close in {0} seconds!" -f $waittime
+	"#"
+	"##########################################################"
 	start-sleep -s $waittime
 	break
 }
@@ -28,14 +28,14 @@ foreach ($node in $config.copy.sourcefolder)
 	{
 		if ($numerrors -eq 0)
 		{
-			write-host "##########################################################"
-			write-host "#"
-			write-host "#  Missing source folder(s)!"
-			write-host "#  The following source folders do not exist:"
-			write-host "#"
+			"##########################################################"
+			"#"
+			"#  Missing source folder(s)!"
+			"#  The following source folders do not exist:"
+			"#"
 		}
 	
-		write-host "#  $folder"
+		"#  $folder"
 		
 		$numerrors++
 	}
@@ -43,27 +43,27 @@ foreach ($node in $config.copy.sourcefolder)
 
 if ($numerrors -gt 0)
 {
-	write-host "#"
-	write-host "#  Backup to NAS will not run!"
-	write-host "#"
-	write-host "#  This window will close in $waittime seconds!"
-	write-host "#"
-	write-host "##########################################################"
+	"#"
+	"#  Backup to NAS will not run!"
+	"#"
+	"#  This window will close in {0} seconds!" -f $waittime
+	"#"
+	"##########################################################"
 	start-sleep -s $waittime
 	break
 }
 
-write-host "##########################################################"
-write-host "#"
-write-host "#  Backup from local machine to NAS"
-write-host "#"
-write-host "#  Folders will be backed up to:"
-write-host "#  $nasfolder"
-write-host "#"
-write-host "#  Backup will start in $waittime seconds!"
-write-host "#"
-write-host "##########################################################"
-write-host ""
+"##########################################################"
+"#"
+"#  Backup from local machine to NAS"
+"#"
+"#  Folders will be backed up to:"
+"#  $nasfolder"
+"#"
+"#  Backup will start in {0} seconds!" -f $waittime
+"#"
+"##########################################################"
+""
 start-sleep -s $waittime
 
 foreach ($node in $config.copy.sourcefolder)
