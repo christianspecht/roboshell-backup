@@ -30,3 +30,7 @@ Just create a folder on your local machine and copy the RoboShell Backup files i
 Then, change the values in the **config.xml** according to your settings (which folders to backup, drive letters of your NAS and your USB drive).
 
 For more information on the installation (and how to get RoboCopy and Windows PowerShell if it's not already on your machine), see the [wiki](https://bitbucket.org/christianspecht/roboshell-backup/wiki/Install).
+
+### License
+
+RoboShell Backup is licensed under the MIT License. See **License.txt** for details.
