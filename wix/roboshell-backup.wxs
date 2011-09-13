@@ -1,28 +1,34 @@
 <?xml version='1.0'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
 
+<?define ProductName = RoboShell Backup ?>
+<?define Manufacturer = Christian Specht ?>
+<?define Description = A simple personal backup tool, using RoboCopy and written in Windows Powershell ?>
+
 	<Product
 			Id='{E00ADE45-F382-47C5-B6C2-647715412338}'
-			Name='RoboShell Backup'
+			Name='$(var.ProductName)'
 			Language='1033' 
 			Version='1.0.0.0'
-			Manufacturer='Christian Specht'
+			Manufacturer='$(var.Manufacturer)'
 			UpgradeCode='{8D141C50-035C-4657-91DA-B264C3023032}' >
 			
 		<Package 
-				Description='A simple personal backup tool, using RoboCopy and written in Windows Powershell'
-				Manufacturer='Christian Specht'
+				Description='$(var.Description)'
+				Manufacturer='$(var.Manufacturer)'
 				InstallerVersion='200'
 				Compressed='yes' />	
 		
 		<Media Id='1' Cabinet='roboshellbackup.cab' EmbedCab='yes' />
 		
 		<Directory Id='TARGETDIR' Name='SourceDir'>
+		
 			<Directory Id='ProgramFilesFolder' Name='PFiles'>
-				<Directory Id='INSTALLDIR' Name='RoboShell Backup'>
+				<Directory Id='INSTALLDIR' Name='$(var.ProductName)'>
 					<Directory Id='DE' Name='de-DE' />
 				</Directory>
 			</Directory>
+
 		</Directory>
 		
 		<DirectoryRef Id='INSTALLDIR'>
@@ -58,7 +64,7 @@
 			</Component>
 		</DirectoryRef>
 		
-		<Feature Id='Complete' Title='RoboShell Backup' Level='1' Display='expand' ConfigurableDirectory='INSTALLDIR'>
+		<Feature Id='Complete' Title='$(var.ProductName)' Level='1' Display='expand' ConfigurableDirectory='INSTALLDIR'>
 			<ComponentRef Id='Config' />
 			<ComponentRef Id='License' />
 			<ComponentRef Id='MessagesDE' />
