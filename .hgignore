@@ -1,0 +1,4 @@
+syntax: glob
+*.wixobj
+*.wixpdb
+*.msi
