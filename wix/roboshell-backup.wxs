@@ -19,8 +19,10 @@
 		
 		<Directory Id='TARGETDIR' Name='SourceDir'>
 			<Directory Id='ProgramFilesFolder' Name='PFiles'>
-				<Directory Id='INSTALLDIR' Name='RoboShell Backup' />
-			</Directory>	
+				<Directory Id='INSTALLDIR' Name='RoboShell Backup'>
+					<Directory Id='DE' Name='de-DE' />
+				</Directory>
+			</Directory>
 		</Directory>
 		
 		<DirectoryRef Id='INSTALLDIR'>
@@ -50,9 +52,16 @@
 			</Component>
 		</DirectoryRef>
 		
+		<DirectoryRef Id='DE'>
+			<Component Id='MessagesDE' Guid='{6CE4837F-BA18-4B17-A1F8-FD6300149FD8}'>
+				<File Id='MessagesDE' Name='messages.psd1' DiskId='1' Source='src\de-DE\messages.psd1' KeyPath='yes' />
+			</Component>
+		</DirectoryRef>
+		
 		<Feature Id='Complete' Title='RoboShell Backup' Level='1' Display='expand'>
 			<ComponentRef Id='Config' />
 			<ComponentRef Id='License' />
+			<ComponentRef Id='MessagesDE' />
 			<ComponentRef Id='MessagesEN' />
 			<ComponentRef Id='NasToUsbBAT' />
 			<ComponentRef Id='NasToUsbPS1' />
