@@ -28,7 +28,19 @@
 					<Directory Id='DE' Name='de-DE' />
 				</Directory>
 			</Directory>
-
+			
+			<Directory Id="ProgramMenuFolder" Name="Programs">
+				<Directory Id="ProgramMenuDir" Name="$(var.ProductName)">
+					<Component Id="ProgramMenuDir" Guid="{BEDA5350-ED81-4705-9B69-8E8C864EB348}">
+						<RemoveFolder Id='ProgramMenuDir' On='uninstall' />
+						<RegistryValue
+						Root='HKCU' Key='Software\$(var.ProductName)'
+						Type='string' Value='[INSTALLDIR]' KeyPath='yes'
+						/>
+					</Component>
+				</Directory>
+			</Directory>
+			
 		</Directory>
 		
 		<DirectoryRef Id='INSTALLDIR'>
@@ -42,13 +54,17 @@
 				<File Id='MessagesEN' Name='messages.psd1' DiskId='1' Source='src\messages.psd1' KeyPath='yes' />
 			</Component>
 			<Component Id='NasToUsbBAT' Guid='{DAA77457-6B1D-4791-A345-842DA2A4BDA1}'>
-				<File Id='NasToUsbBAT' Name='NasToUsb.bat' DiskId='1' Source='src\NasToUsb.bat' KeyPath='yes' />
+				<File Id='NasToUsbBAT' Name='NasToUsb.bat' DiskId='1' Source='src\NasToUsb.bat' KeyPath='yes'>
+					<Shortcut Id='NasToUsbShortcut' Directory='ProgramMenuDir' Name='Copy from NAS to USB' WorkingDirectory='INSTALLDIR' Advertise='yes' />
+				</File>
 			</Component>
 			<Component Id='NasToUsbPS1' Guid='{2D41DED2-4E7A-4B72-AF1A-2E2B406C7D19}'>
 				<File Id='NasToUsbPS1' Name='NasToUsb.ps1' DiskId='1' Source='src\NasToUsb.ps1' KeyPath='yes' />
 			</Component>
 			<Component Id='PcToNasBAT' Guid='{C789A682-DA3C-42FF-88C8-B0CA101ADEA9}'>
-				<File Id='PcToNasBAT' Name='PcToNas.bat' DiskId='1' Source='src\PcToNas.bat' KeyPath='yes' />
+				<File Id='PcToNasBAT' Name='PcToNas.bat' DiskId='1' Source='src\PcToNas.bat' KeyPath='yes'>
+					<Shortcut Id='PcToNasShortcut' Directory='ProgramMenuDir' Name='Copy from PC to NAS' WorkingDirectory='INSTALLDIR' Advertise='yes' />
+				</File>
 			</Component>
 			<Component Id='PcToNasPS1' Guid='{B4873C1C-FFA1-4978-9833-1DBFFCD3C852}'>
 				<File Id='PcToNasPS1' Name='PcToNas.ps1' DiskId='1' Source='src\PcToNas.ps1' KeyPath='yes' />
@@ -65,6 +81,7 @@
 		</DirectoryRef>
 		
 		<Feature Id='Complete' Title='$(var.ProductName)' Level='1' Display='expand' ConfigurableDirectory='INSTALLDIR'>
+			<ComponentRef Id='ProgramMenuDir' />
 			<ComponentRef Id='Config' />
 			<ComponentRef Id='License' />
 			<ComponentRef Id='MessagesDE' />
