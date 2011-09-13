@@ -48,7 +48,7 @@
 				<File Id='PcToNasPS1' Name='PcToNas.ps1' DiskId='1' Source='src\PcToNas.ps1' KeyPath='yes' />
 			</Component>
 			<Component Id='Readme' Guid='{1ABC5043-F83B-480D-8C16-9A51728ED237}'>
-				<File Id='Readme' Name='Readme.txt' DiskId='1' Source='src\README.markdown' KeyPath='yes' />
+				<File Id='Readme' Name='Readme.txt' DiskId='1' Source='README.markdown' KeyPath='yes' />
 			</Component>
 		</DirectoryRef>
 		
