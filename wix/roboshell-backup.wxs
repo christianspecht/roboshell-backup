@@ -26,11 +26,39 @@
 		<DirectoryRef Id='INSTALLDIR'>
 			<Component Id='Config' Guid='{9019e667-62ba-40aa-a8d8-62f766f534db}'>
 				<File Id='Config' Name='Config.xml' DiskId='1' Source='src\Config.xml' KeyPath='yes' />
-			</Component>			
+			</Component>
+			<Component Id='License' Guid='{7c708208-da9e-4500-a208-7c1bc0f2ba5f}'>
+				<File Id='License' Name='License.txt' DiskId='1' Source='src\License.txt' KeyPath='yes' />
+			</Component>
+			<Component Id='MessagesEN' Guid='{10f261e2-6cc1-4bbe-a464-718ab0c2b3e5}'>
+				<File Id='MessagesEN' Name='messages.psd1' DiskId='1' Source='src\messages.psd1' KeyPath='yes' />
+			</Component>
+			<Component Id='NasToUsbBAT' Guid='{daa77457-6b1d-4791-a345-842da2a4bda1}'>
+				<File Id='NasToUsbBAT' Name='NasToUsb.bat' DiskId='1' Source='src\NasToUsb.bat' KeyPath='yes' />
+			</Component>
+			<Component Id='NasToUsbPS1' Guid='{2d41ded2-4e7a-4b72-af1a-2e2b406c7d19}'>
+				<File Id='NasToUsbPS1' Name='NasToUsb.ps1' DiskId='1' Source='src\NasToUsb.ps1' KeyPath='yes' />
+			</Component>
+			<Component Id='PcToNasBAT' Guid='{c789a682-da3c-42ff-88c8-b0ca101adea9}'>
+				<File Id='PcToNasBAT' Name='PcToNas.bat' DiskId='1' Source='src\PcToNas.bat' KeyPath='yes' />
+			</Component>
+			<Component Id='PcToNasPS1' Guid='{b4873c1c-ffa1-4978-9833-1dbffcd3c852}'>
+				<File Id='PcToNasPS1' Name='PcToNas.ps1' DiskId='1' Source='src\PcToNas.ps1' KeyPath='yes' />
+			</Component>
+			<Component Id='Readme' Guid='{1abc5043-f83b-480d-8c16-9a51728ed237}'>
+				<File Id='Readme' Name='Readme.txt' DiskId='1' Source='src\README.markdown' KeyPath='yes' />
+			</Component>
 		</DirectoryRef>
 		
 		<Feature Id='Complete' Title='RoboShell Backup' Level='1' Display='expand'>
 			<ComponentRef Id='Config' />
+			<ComponentRef Id='License' />
+			<ComponentRef Id='MessagesEN' />
+			<ComponentRef Id='NasToUsbBAT' />
+			<ComponentRef Id='NasToUsbPS1' />
+			<ComponentRef Id='PcToNasBAT' />
+			<ComponentRef Id='PcToNasPS1' />
+			<ComponentRef Id='Readme' />
 		</Feature>
 	
 	</Product>
