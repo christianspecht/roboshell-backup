@@ -37,6 +37,7 @@
 						Root='HKCU' Key='Software\$(var.ProductName)'
 						Type='string' Value='[INSTALLDIR]' KeyPath='yes'
 						/>
+						<Shortcut Id='ConfigShortcut' Name='Edit Config' Target='[WindowsFolder]notepad.exe' Arguments='Config.xml' Directory='ProgramMenuDir' WorkingDirectory='INSTALLDIR' />
 					</Component>
 				</Directory>
 			</Directory>
