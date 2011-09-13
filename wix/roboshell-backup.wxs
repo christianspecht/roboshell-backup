@@ -30,7 +30,7 @@
 				<File Id='Config' Name='Config.xml' DiskId='1' Source='src\Config.xml' KeyPath='yes' />
 			</Component>
 			<Component Id='License' Guid='{7C708208-DA9E-4500-A208-7C1BC0F2BA5F}'>
-				<File Id='License' Name='License.txt' DiskId='1' Source='src\License.txt' KeyPath='yes' />
+				<File Id='License' Name='License.rtf' DiskId='1' Source='src\License.rtf' KeyPath='yes' />
 			</Component>
 			<Component Id='MessagesEN' Guid='{10F261E2-6CC1-4BBE-A464-718AB0C2B3E5}'>
 				<File Id='MessagesEN' Name='messages.psd1' DiskId='1' Source='src\messages.psd1' KeyPath='yes' />
@@ -71,6 +71,7 @@
 		</Feature>
 		
 		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+		<WixVariable Id="WixUILicenseRtf" Value="src\License.rtf" />
 		<UIRef Id="WixUI_InstallDir" />
 		<UIRef Id="WixUI_ErrorProgressText" />
 		

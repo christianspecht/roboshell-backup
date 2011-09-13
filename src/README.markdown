@@ -33,4 +33,4 @@ For more information on the installation (and how to get RoboCopy and Windows Po
 
 ### License
 
-RoboShell Backup is licensed under the MIT License. See **License.txt** for details.
+RoboShell Backup is licensed under the MIT License. See **License.rtf** for details.
