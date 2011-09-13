@@ -1,6 +1,22 @@
 <?xml version="1.0"?>
 <copy>
 
+	<!--
+	
+	###############################################################################
+	#
+	#	PLEASE NOTE:
+	#
+	#	Before you run RoboShell Backup for the first time, you
+	#	need to change the values below according to your setup.
+	#
+	#	See the wiki for more information:
+	#	https://bitbucket.org/christianspecht/roboshell-backup/wiki/Install
+	#
+	###############################################################################
+	
+	-->
+
 	<!-- NAS drive letter (with backslash!) -->
 	<nasdrive value="Z:\"/>
 

@@ -93,6 +93,13 @@
 			<ComponentRef Id='Readme' />
 		</Feature>
 		
+		<InstallExecuteSequence>
+			<Custom Action='LaunchFile' After='InstallFinalize'>NOT Installed</Custom>
+		</InstallExecuteSequence>
+		
+		<Property Id='NOTEPAD'>Notepad.exe</Property>
+		<CustomAction Id='LaunchFile' Property='NOTEPAD' ExeCommand='[INSTALLDIR]Config.xml' Return='asyncNoWait' />
+		
 		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
 		<WixVariable Id="WixUILicenseRtf" Value="src\License.rtf" />
 		<UIRef Id="WixUI_InstallDir" />
