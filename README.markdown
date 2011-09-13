@@ -36,4 +36,4 @@ Information for developers is available in the [wiki](https://bitbucket.org/chri
 
 ### License
 
-RoboShell Backup is licensed under the MIT License. See **License.rtf** for details.
+RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://bitbucket.org/christianspecht/roboshell-backup/src/tip/src/License.rtf)** for details.
