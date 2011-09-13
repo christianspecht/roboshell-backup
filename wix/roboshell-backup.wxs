@@ -58,7 +58,7 @@
 			</Component>
 		</DirectoryRef>
 		
-		<Feature Id='Complete' Title='RoboShell Backup' Level='1' Display='expand'>
+		<Feature Id='Complete' Title='RoboShell Backup' Level='1' Display='expand' ConfigurableDirectory='INSTALLDIR'>
 			<ComponentRef Id='Config' />
 			<ComponentRef Id='License' />
 			<ComponentRef Id='MessagesDE' />
@@ -69,6 +69,10 @@
 			<ComponentRef Id='PcToNasPS1' />
 			<ComponentRef Id='Readme' />
 		</Feature>
-	
+		
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+		<UIRef Id="WixUI_InstallDir" />
+		<UIRef Id="WixUI_ErrorProgressText" />
+		
 	</Product>
 </Wix>

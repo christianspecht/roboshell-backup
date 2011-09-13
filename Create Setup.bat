@@ -1,6 +1,6 @@
 candle wix\roboshell-backup.wxs
 
-light roboshell-backup.wixobj
+light -ext WixUIExtension roboshell-backup.wixobj
 
 del /q release\*.*
 md release
