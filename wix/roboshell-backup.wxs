@@ -38,6 +38,7 @@
 						Type='string' Value='[INSTALLDIR]' KeyPath='yes'
 						/>
 						<Shortcut Id='ConfigShortcut' Name='Edit Config' Target='[WindowsFolder]notepad.exe' Arguments='Config.xml' Directory='ProgramMenuDir' WorkingDirectory='INSTALLDIR' />
+						<Shortcut Id='ReadmeShortcut' Name='Readme' Target='[ARPREADME]' Directory='ProgramMenuDir' />
 					</Component>
 				</Directory>
 			</Directory>
