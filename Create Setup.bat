@@ -1,11 +1,9 @@
 set productversion=1.0
 
+del /q release\*.*
+
 candle wix\roboshell-backup.wxs
 
-light -ext WixUIExtension roboshell-backup.wixobj  -out roboshell-backup-%productversion%.msi
-
-del /q release\*.*
-md release
-copy roboshell-backup-%productversion%.msi release
+light -ext WixUIExtension roboshell-backup.wixobj  -out release\roboshell-backup-%productversion%.msi
 
 pause
