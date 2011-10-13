@@ -34,6 +34,12 @@ For more information on the installation (and how to get RoboCopy and Windows Po
 
 Information for developers is available in the [wiki](https://bitbucket.org/christianspecht/roboshell-backup/wiki/Developers).
 
+### Acknowledgements
+
+RoboShell Backup makes use of the following open source projects:
+
+ - [WiX](http://wix.codeplex.com/)
+
 ### License
 
 RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://bitbucket.org/christianspecht/roboshell-backup/src/tip/src/License.rtf)** for details.
