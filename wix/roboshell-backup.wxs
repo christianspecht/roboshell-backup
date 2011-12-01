@@ -1,17 +1,20 @@
 <?xml version='1.0'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
 
+<?define ProductId = {E00ADE45-F382-47C5-B6C2-647715412338} ?>
+<?define UpgradeCode = {8D141C50-035C-4657-91DA-B264C3023032} ?>
+
 <?define ProductName = RoboShell Backup ?>
 <?define Manufacturer = Christian Specht ?>
 <?define Description = A simple personal backup tool, using RoboCopy and written in Windows Powershell ?>
 
 	<Product
-			Id='{E00ADE45-F382-47C5-B6C2-647715412338}'
+			Id='$(var.ProductId)'
 			Name='$(var.ProductName) $(env.productversion)'
 			Language='1033' 
 			Version='$(env.productversion)'
 			Manufacturer='$(var.Manufacturer)'
-			UpgradeCode='{8D141C50-035C-4657-91DA-B264C3023032}' >
+			UpgradeCode='$(var.UpgradeCode)' >
 			
 		<Package 
 				Description='$(var.Description)'
