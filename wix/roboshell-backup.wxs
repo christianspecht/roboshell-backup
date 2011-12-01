@@ -102,6 +102,9 @@
 			<Custom Action='LaunchFile' After='InstallFinalize'>NOT Installed</Custom>
 		</InstallExecuteSequence>
 		
+		<MajorUpgrade
+			DowngradeErrorMessage='A later version of [ProductName] is already installed. Setup will now exit.' />
+		
 		<Property Id='NOTEPAD'>Notepad.exe</Property>
 		<CustomAction Id='LaunchFile' Property='NOTEPAD' ExeCommand='[INSTALLDIR]Config.xml' Return='asyncNoWait' />
 		
