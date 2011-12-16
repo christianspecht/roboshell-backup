@@ -15,14 +15,14 @@ If your setup looks like this, then RoboShell Backup is for you: It helps you au
 
 RoboShell Backup consists of two batch files:
 
-- PcToNas.bat copies folders from your local machine to a NAS drive.
-- NasToUsb.bat backups the whole NAS drive to an external USB disk.
+- `PcToNas.bat` copies folders from your local machine to a NAS drive.
+- `NasToUsb.bat` backups the whole NAS drive to an external USB disk.
 
 There is a config file in which you can specify the local folders to be backed up, and the drive letters of the NAS and USB drives.
 
 ## How to install?
 
-In order to use RoboShell Backup, you need to have RoboCopy and Windows Powershell installed and in your %PATH% variable.  
+In order to use RoboShell Backup, you need to have RoboCopy and Windows Powershell installed and in your `%PATH%` variable.  
 Depending on your Windows version, this may already be the case.
 
 The installation itself is easy, just run the setup.  
