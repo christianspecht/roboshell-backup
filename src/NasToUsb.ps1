@@ -1,3 +1,5 @@
+.\logo
+
 $config = [xml](get-content .\Config.xml)
 
 $nasdrive = $config.copy.nasdrive.value

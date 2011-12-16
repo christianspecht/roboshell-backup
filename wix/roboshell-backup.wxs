@@ -77,6 +77,9 @@
 			<Component Id='Readme' Guid='{1ABC5043-F83B-480D-8C16-9A51728ED237}'>
 				<File Id='Readme' Name='Readme.txt' DiskId='1' Source='README.markdown' KeyPath='yes' />
 			</Component>
+			<Component Id='LogoPS1' Guid='{F2A5251F-4846-40AD-AFE8-2C6AE0A9EEF3}'>
+				<File Id='LogoPS1' Name='logo.ps1' DiskId='1' Source='src\logo.ps1' KeyPath='yes' />
+			</Component>
 		</DirectoryRef>
 		
 		<DirectoryRef Id='DE'>
@@ -96,6 +99,7 @@
 			<ComponentRef Id='PcToNasBAT' />
 			<ComponentRef Id='PcToNasPS1' />
 			<ComponentRef Id='Readme' />
+			<ComponentRef Id='LogoPS1' />
 		</Feature>
 		
 		<InstallExecuteSequence>
