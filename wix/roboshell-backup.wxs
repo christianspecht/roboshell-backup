@@ -110,6 +110,8 @@
 		
 		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
 		<WixVariable Id="WixUILicenseRtf" Value="src\License.rtf" />
+		<WixVariable Id="WixUIBannerBmp" Value='wix\wixbanner.bmp' />
+		<WixVariable Id="WixUIDialogBmp" Value='wix\wixdialog.bmp' />
 		<Icon Id='head.ico' SourceFile='img\head.ico' />
 		<UIRef Id="WixUI_InstallDir" />
 		<UIRef Id="WixUI_ErrorProgressText" />
