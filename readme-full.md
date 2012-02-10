@@ -1,7 +1,10 @@
-# RoboShell Backup
-
 RoboShell Backup is a simple personal backup tool.  
 It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy files, and it is written in [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell).
+
+## Links
+
+- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/roboshell-backup)
+- [Download page](https://bitbucket.org/christianspecht/roboshell-backup/downloads)
 
 ## What does it do?
 
