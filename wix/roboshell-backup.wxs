@@ -121,10 +121,10 @@
 		<UIRef Id="WixUI_ErrorProgressText" />
 		
 		<Property Id='ARPCOMMENTS'>$(var.Description)</Property>
-		<Property Id='ARPHELPLINK'>https://bitbucket.org/christianspecht/roboshell-backup/wiki</Property>
-		<Property Id='ARPREADME'>https://bitbucket.org/christianspecht/roboshell-backup/overview</Property>
-		<Property Id='ARPURLINFOABOUT'>http://christianspecht.bitbucket.org/</Property>
-		<Property Id='ARPURLUPDATEINFO'>https://bitbucket.org/christianspecht/roboshell-backup/downloads</Property>
+		<Property Id='ARPHELPLINK'>http://christianspecht.de/roboshell-backup</Property>
+		<Property Id='ARPREADME'>http://christianspecht.de/roboshell-backup</Property>
+		<Property Id='ARPURLINFOABOUT'>http://christianspecht.de</Property>
+		<Property Id='ARPURLUPDATEINFO'>http://christianspecht.de/roboshell-backup</Property>
 		<Property Id='ARPPRODUCTICON'>head.ico</Property>
 		
 	</Product>
