@@ -3,10 +3,14 @@
 RoboShell Backup is a simple personal backup tool.  
 It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy files, and it is written in [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell).
 
+---
+
 ## Links
 
 - [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/roboshell-backup)
 - [Download page](https://bitbucket.org/christianspecht/roboshell-backup/downloads)
+
+---
 
 ## What does it do?
 
@@ -36,6 +40,8 @@ Then, every time you feel like taking a complete backup of your NAS, you plug an
 RoboShell Backup mirrors the copied files using RoboCopy's `/MIR` switch, which means that only changed, deleted and new files will be touched at all.
 So, making a backup doesn't take much time (except for the very first run, of course).
 
+---
+
 ## Setup
 
 RoboShell Backup assumes that RoboCopy and Windows Powershell are both installed on your machine and in your `%PATH%` variable.  
@@ -53,8 +59,7 @@ Links to the downloads are on the bottom of the [Resource Kit's Wikipedia page](
 Windows PowerShell is part of all Windows versions since Windows XP SP2.  
 So if you have at least XP SP2, it should be there. If it's not, you can get it [here](http://www.microsoft.com/powershell).
 
-
-
+---
 
 ## How to build?
 
@@ -67,11 +72,15 @@ To build it, you need the WiX Toolkit installed on your machine. At the moment, 
 The build script is the file `Create Setup.bat` in the main folder of the repository, and it assumes that WiX is in your `%PATH%` variable.  
 In particular, the `bin` subfolder of the WiX installation path needs to be in your `%PATH%` variable, because the files used by the build script are located there.
 
+---
+
 ### Acknowledgements
 
 RoboShell Backup makes use of the following open source projects:
 
  - [WiX](http://wix.codeplex.com/)
+
+---
 
 ### License
 
