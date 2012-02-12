@@ -12,6 +12,20 @@ It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy fi
 
 ---
 
+## Background
+
+I wrote RoboShell Backup because I needed something to fit **my** personal backup strategy.  
+I have several computers and a NAS drive at home and I want to do two things:
+
+1. I want to plug an external USB drive to any of my machines and just run one script that backups the whole NAS drive onto the USB drive.
+
+2. There is some stuff locally on each machine that I can't save directly on the NAS.  
+I try to put as much directly on the NAS drive as possible, but there are some programs that save files locally (for example in My Documents) and I can't change that.  
+--> I want a copy of all that data on the NAS, so it gets automatically backed up on the USB disk as well, without having to connect the USB disk to each machine, every time I want to make a backup.  
+(that's what I did before I wrote RoboShell Backup)
+
+---
+
 ## What does it do?
 
 RoboShell Backup works best if you have the following setup:
