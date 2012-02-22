@@ -36,5 +36,8 @@
 	
 	<!-- wait time (in seconds) after info messages -->
 	<waittime value="5"/>
+	
+	<!-- show ASCII logo on startup (0 or 1) -->
+	<showlogo value="1"/>
   
 </copy>

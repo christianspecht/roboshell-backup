@@ -1,6 +1,9 @@
-.\logo
-
 $config = [xml](get-content .\Config.xml)
+
+if ($config.copy.showlogo.value -eq "1")
+{
+	.\logo
+}
 
 $nasdrive = $config.copy.nasdrive.value
 $nasfolder = $nasdrive + $config.copy.nasfolder.value
