@@ -39,7 +39,7 @@ if (!(test-path $usbdrive))
 	break
 }
 
-$usbfolder = $usbdrive + "Backup_NAS"
+$usbfolder = Join-Path $usbdrive "Backup_NAS"
 
 "##########################################################"
 "#"

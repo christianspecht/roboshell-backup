@@ -6,7 +6,7 @@ if ($config.copy.showlogo.value -eq "1")
 }
 
 $nasdrive = $config.copy.nasdrive.value
-$nasfolder = $nasdrive + $config.copy.nasfolder.value
+$nasfolder = Join-Path $nasdrive $config.copy.nasfolder.value
 $waittime = $config.copy.waittime.value
 
 Import-LocalizedData -BindingVariable msg -FileName messages.psd1
@@ -76,6 +76,6 @@ start-sleep -s $waittime
 foreach ($node in $config.copy.sourcefolder)
 {
     $from = $node.from
-    $to = $nasfolder + $node.to   
+    $to = Join-Path $nasfolder $node.to   
     robocopy.exe "$from" "$to" *.* /mir /xj /fft
 }
