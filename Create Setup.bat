@@ -1,4 +1,7 @@
-set productversion=1.0
+@echo off
+
+rem set version number (see batch file for more details)
+call wix\version-number.bat
 
 del /q release\*.*
 

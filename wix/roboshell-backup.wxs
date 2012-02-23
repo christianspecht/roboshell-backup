@@ -1,7 +1,7 @@
 <?xml version='1.0'?>
 <Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
 
-<?define ProductId = {E00ADE45-F382-47C5-B6C2-647715412338} ?>
+<?define ProductId = $(env.ProductId) ?>
 <?define UpgradeCode = {8D141C50-035C-4657-91DA-B264C3023032} ?>
 
 <?define ProductName = RoboShell Backup ?>
