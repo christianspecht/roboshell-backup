@@ -39,5 +39,19 @@
 	
 	<!-- show ASCII logo on startup (0 or 1) -->
 	<showlogo value="1"/>
-  
+	
+	<!--
+	TrueCrypt settings, to enable RoboShell Backup to write to an TrueCrypt-encrypted USB drive (TrueCrypt is free and open source)
+	You have to set up each USB drive once in order for this to work.
+	Read this for more instructions: http://TODO
+	If you don't want to encrypt your USB drive, just don't touch these settings.
+	
+	Values:
+	"enabled": set to 1 to enable TrueCrypt mode
+	"exepath": folder and path of TrueCrypt.exe on USB drive (without drive letter - this will be taken from the "usbdrive" value above)
+	"volume": folder and path of TrueCrypt volume on USB drive (again, without drive letter)
+	"mountto": drive letter to mount the volume to (must be unused)
+	-->
+	<truecrypt enabled="0" exepath="truecrypt\truecrypt.exe" volume="Volume1" mountto="X:"/>
+
 </copy>

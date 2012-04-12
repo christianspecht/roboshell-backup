@@ -14,4 +14,7 @@ ConvertFrom-StringData @"
 	backupStartU3 = USB drive destination folder:  {0}
 	pressEnter1 = Press Enter to start
 	pressEnter2 = Press Enter to exit
+	tcMissingExe = TrueCrypt.exe could not be found on USB drive: {0}
+	tcMissingVolume = TrueCrypt volume could not be found on USB drive: {0}
+	tcMountDriveExists = Drive {0} already exists, can't be mounted!
 "@

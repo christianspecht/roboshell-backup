@@ -8,6 +8,7 @@ if ($config.copy.showlogo.value -eq "1")
 $nasdrive = $config.copy.nasdrive.value
 $usbdrive = $config.copy.usbdrive.value
 $waittime = $config.copy.waittime.value
+$truecrypt = $config.copy.truecrypt
 
 Import-LocalizedData -BindingVariable msg -FileName messages.psd1
 
@@ -37,6 +38,55 @@ if (!(test-path $usbdrive))
 	"##########################################################"
 	start-sleep -s $waittime
 	break
+}
+
+if ($truecrypt.enabled -eq "1")
+{
+    $tcexe = join-path $usbdrive $truecrypt.exepath
+    
+    if (!(test-path $tcexe))
+    {
+    	"##########################################################"
+    	"#"
+    	"#  " + $msg.tcMissingExe -f $tcexe
+    	"#  " + $msg.noBackupU
+    	"#"
+    	"#  " + $msg.windowClose -f $waittime
+    	"#"
+    	"##########################################################"
+    	start-sleep -s $waittime
+    	break
+    }
+    
+    $tcvolume = join-path $usbdrive $truecrypt.volume
+    
+    if (!(test-path $tcvolume))
+    {
+    	"##########################################################"
+    	"#"
+    	"#  " + $msg.tcMissingVolume -f $tcvolume
+    	"#  " + $msg.noBackupU
+    	"#"
+    	"#  " + $msg.windowClose -f $waittime
+    	"#"
+    	"##########################################################"
+    	start-sleep -s $waittime
+    	break
+    }
+    
+    if ((test-path $truecrypt.mountto))
+    {
+    	"##########################################################"
+    	"#"
+    	"#  " + $msg.tcMountDriveExists -f $truecrypt.mountto
+    	"#  " + $msg.noBackupU
+    	"#"
+    	"#  " + $msg.windowClose -f $waittime
+    	"#"
+    	"##########################################################"
+    	start-sleep -s $waittime
+    	break
+    }
 }
 
 $usbfolder = Join-Path $usbdrive "Backup_NAS"
