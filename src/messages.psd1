@@ -12,9 +12,12 @@ ConvertFrom-StringData @"
 	backupStartU1 = Backup from NAS to external USB drive
 	backupStartU2 = NAS drive letter:              {0}
 	backupStartU3 = USB drive destination folder:  {0}
+	backupStartU4 = (mounted TrueCrypt volume)
 	pressEnter1 = Press Enter to start
 	pressEnter2 = Press Enter to exit
 	tcMissingExe = TrueCrypt.exe could not be found on USB drive: {0}
 	tcMissingVolume = TrueCrypt volume could not be found on USB drive: {0}
 	tcMountDriveExists = Drive {0} already exists, can't be mounted!
+	tcMount = Mounting drive {0}
+	tcDisMount = Dismounting drive {0}
 "@

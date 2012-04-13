@@ -50,8 +50,8 @@
 	"enabled": set to 1 to enable TrueCrypt mode
 	"exepath": folder and path of TrueCrypt.exe on USB drive (without drive letter - this will be taken from the "usbdrive" value above)
 	"volume": folder and path of TrueCrypt volume on USB drive (again, without drive letter)
-	"mountto": drive letter to mount the volume to (must be unused)
+	"mountto": drive letter to mount the volume to (with backslash, must be unused)
 	-->
-	<truecrypt enabled="0" exepath="truecrypt\truecrypt.exe" volume="Volume1" mountto="X:"/>
+	<truecrypt enabled="0" exepath="truecrypt\truecrypt.exe" volume="Backup" mountto="X:\"/>
 
 </copy>

@@ -12,9 +12,12 @@ ConvertFrom-StringData @"
 	backupStartU1 = Backup vom NAS auf externes USB-Laufwerk
 	backupStartU2 = NAS-Laufwerksbuchstabe:        {0}
 	backupStartU3 = Zielordner auf USB-Laufwerk:   {0}
+	backupStartU4 = (gemountetes TrueCrypt-Volume)
 	pressEnter1 = Zum Starten Enter drücken
 	pressEnter2 = Zum Beenden Enter drücken
 	tcMissingExe = TrueCrypt.exe nicht auf USB-Laufwerk gefunden: {0}
 	tcMissingVolume = TrueCrypt-Volume nicht auf USB-Laufwerk gefunden: {0}
 	tcMountDriveExists = Laufwerk {0} existiert schon, kann nicht gemountet werden!
+	tcMount = Laufwerk {0} wird gemounted
+	tcDisMount = Laufwerk {0} wird dismounted
 "@
