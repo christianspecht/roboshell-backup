@@ -90,8 +90,6 @@ if ($truecrypt.enabled -eq "1")
     	break
     }
     
-    $msg.tcMount -f $tcmount
-    ""    
     $tmp = [System.Diagnostics.Process]::Start("$tcexe", "/q /v $tcvolume /l $tcmount /b")
     
     # concatenate path manually here, because Join-Path apparently doesn't work with mounted folders
@@ -117,12 +115,20 @@ if ($truecrypt.enabled -eq "1")
 "#"
 "##########################################################"
 ""
-read-host $msg.pressEnter1
-
-# in TrueCrypt mode, wait a few seconds to make sure that the drive is really mounted
 if ($truecrypt.enabled -eq "1")
 {
+    $msg.tcMount -f $tcmount
+    ""
+    $msg.tcPressEnter1
+    $msg.tcPressEnter2
+    read-host $msg.tcPressEnter3
+    
+    # in TrueCrypt mode, wait a few seconds to make sure that the drive is really mounted
     start-sleep -s 5
+}
+else
+{
+    read-host $msg.pressEnter1
 }
 
 robocopy.exe "$nasdrive" "$usbfolder" *.* /mir /fft

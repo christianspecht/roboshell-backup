@@ -20,4 +20,7 @@ ConvertFrom-StringData @"
 	tcMountDriveExists = Drive {0} already exists, can't be mounted!
 	tcMount = Mounting drive {0}
 	tcDisMount = Dismounting drive {0}
+	tcPressEnter1 = A TrueCrypt window just opened.
+	tcPressEnter2 = Please enter the password there!
+	tcPressEnter3 = Afterwards, press Enter here to start
 "@

@@ -17,7 +17,10 @@ ConvertFrom-StringData @"
 	pressEnter2 = Zum Beenden Enter drücken
 	tcMissingExe = TrueCrypt.exe nicht auf USB-Laufwerk gefunden: {0}
 	tcMissingVolume = TrueCrypt-Volume nicht auf USB-Laufwerk gefunden: {0}
-	tcMountDriveExists = Laufwerk {0} existiert schon, kann nicht gemountet werden!
+	tcMountDriveExists = Laufwerk {0} existiert schon, kann nicht gemounted werden!
 	tcMount = Laufwerk {0} wird gemounted
 	tcDisMount = Laufwerk {0} wird dismounted
+	tcPressEnter1 = Ein TrueCrypt-Fenster hat sich gerade geöffnet.
+	tcPressEnter2 = Bitte geben Sie dort das Passwort ein!
+	tcPressEnter3 = Danach hier Enter drücken zum Starten
 "@
