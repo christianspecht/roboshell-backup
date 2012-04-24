@@ -23,4 +23,6 @@ ConvertFrom-StringData @"
 	tcPressEnter1 = Ein TrueCrypt-Fenster hat sich gerade geöffnet.
 	tcPressEnter2 = Bitte geben Sie dort das Passwort ein!
 	tcPressEnter3 = Danach hier Enter drücken zum Starten
+	tcDriveNotMounted1 = TrueCrypt-Volume konnte nicht gemounted werden!
+	tcDriveNotMounted2 = Gemountetes Laufwerk {0} existiert nicht.
 "@

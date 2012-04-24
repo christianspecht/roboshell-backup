@@ -125,6 +125,21 @@ if ($truecrypt.enabled -eq "1")
     
     # in TrueCrypt mode, wait a few seconds to make sure that the drive is really mounted
     start-sleep -s 5
+    
+    if (!(test-path $tcmount))
+    {
+    	"##########################################################"
+    	"#"
+    	"#  " + $msg.tcDriveNotMounted1
+    	"#  " + $msg.tcDriveNotMounted2 -f $tcmount
+    	"#  " + $msg.noBackupU
+    	"#"
+    	"#  " + $msg.windowClose -f $waittime
+    	"#"
+    	"##########################################################"
+    	start-sleep -s $waittime
+    	break
+    }    
 }
 else
 {
