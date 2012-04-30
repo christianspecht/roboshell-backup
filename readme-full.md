@@ -97,6 +97,7 @@ In particular, the `bin` subfolder of the WiX installation path needs to be in y
 
 RoboShell Backup makes use of the following open source projects:
 
+ - [TrueCrypt](http://www.truecrypt.org/)
  - [WiX](http://wix.codeplex.com/)
 
 ---
