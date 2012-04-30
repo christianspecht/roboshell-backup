@@ -43,7 +43,7 @@
 	<!--
 	TrueCrypt settings, to enable RoboShell Backup to write to an TrueCrypt-encrypted USB drive (TrueCrypt is free and open source)
 	You have to set up each USB drive once in order for this to work.
-	Read this for more instructions: http://TODO
+	Read this for more instructions: http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/
 	If you don't want to encrypt your USB drive, just don't touch these settings.
 	
 	Values:

@@ -43,8 +43,12 @@ You can  specify in the `config.xml` file:
   - the local folders to be copied
   - the drive letter of the NAS drive
   - the name of the destination folder on the NAS drive
-- `NasToUsb.bat` backups the whole NAS drive to an external USB disk.  
-You can specify the drive letter of the USB disk in the `config.xml` file.
+- `NasToUsb.bat` backups the whole NAS drive to an external USB drive  
+(which can be encrypted with [TrueCrypt](http://www.truecrypt.org/)).  
+You can specify in the `config.xml` file:
+  - the drive letter of the USB drive
+  - settings for TrueCrypt (optional)  
+*(If enabled, RoboShell Backup will automatically mount and dismount your TrueCrypt volume - [read more about how to set this up](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/))*
 
 The idea is that you run `PcToNas.bat` regularly on each of your machines (by putting it into your Startup folder, for example), so that all your important data is always on your NAS drive, including the local stuff from each machine.  
 Then, every time you feel like taking a complete backup of your NAS, you plug an external USB drive to any of your machines and run `NasToUsb.bat` to copy the whole NAS on the USB drive.
@@ -61,6 +65,9 @@ Depending on your Windows version, this may already be the case (see below for m
 
 The installation of RoboShell Backup itself is easy, just run the setup.  
 When the installation has finished, the config file will automatically open in Notepad. You need to change the values in the config file once, according to your setup (which folders to backup, drive letters of your NAS and your USB drive).
+
+As mentioned before, RoboShell Backup can write to [TrueCrypt](http://www.truecrypt.org/)-encrypted USB drives.  
+You don't need to install TrueCrypt on any of your machines - you just need to set up each USB drive once ([instructions and more information here](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/)). RoboShell Backup will then run TrueCrypt directly from the USB drive, in portable mode.
 
 #### How to get RoboCopy and PowerShell
 
