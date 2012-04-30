@@ -46,9 +46,7 @@ You can  specify in the `config.xml` file:
 - `NasToUsb.bat` backups the whole NAS drive to an external USB disk.  
 You can specify the drive letter of the USB disk in the `config.xml` file.
 
-There is a config file in which you can specify the local folders to be backed up, and the drive letters of the NAS and USB drives.
-
-The idea is that you run `PcToNas.bat` regularly on each of your machines, so that all your important data is always on your NAS drive, including the local stuff from each machine.  
+The idea is that you run `PcToNas.bat` regularly on each of your machines (by putting it into your Startup folder, for example), so that all your important data is always on your NAS drive, including the local stuff from each machine.  
 Then, every time you feel like taking a complete backup of your NAS, you plug an external USB drive to any of your machines and run `NasToUsb.bat` to copy the whole NAS on the USB drive.
 
 RoboShell Backup mirrors the copied files using RoboCopy's `/MIR` switch, which means that only changed, deleted and new files will be touched at all.
