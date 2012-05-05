@@ -85,7 +85,7 @@ So if you have at least XP SP2, it should be there. If it's not, you can get it 
 RoboShell Backup itself doesn't need to be built, because it consists just of batch files and PowerShell scripts.  
 The only thing that needs to be compiled is the MSI setup.
 
-The setup is made using [WiX](http://wix.codeplex.com/).  
+The setup is made using [WiX](http://wixtoolset.org/).  
 To build it, you need the WiX Toolkit installed on your machine. At the moment, we're using WiX 3.5 which you can download [here](http://wix.codeplex.com/releases/view/60102).
 
 The build script is the file `Create Setup.bat` in the main folder of the repository, and it assumes that WiX is in your `%PATH%` variable.  
@@ -98,7 +98,7 @@ In particular, the `bin` subfolder of the WiX installation path needs to be in y
 RoboShell Backup makes use of the following open source projects:
 
  - [TrueCrypt](http://www.truecrypt.org/)
- - [WiX](http://wix.codeplex.com/)
+ - [WiX](http://wixtoolset.org/)
 
 ---
 
