@@ -6,7 +6,6 @@ if ($config.copy.showlogo.value -eq "1")
 }
 
 $nasdrive = $config.copy.nasdrive.value
-$nasfolder = Join-Path $nasdrive $config.copy.nasfolder.value
 $waittime = $config.copy.waittime.value
 
 Import-LocalizedData -BindingVariable msg -FileName messages.psd1
@@ -24,6 +23,8 @@ if (!(test-path $nasdrive))
 	start-sleep -s $waittime
 	break
 }
+
+$nasfolder = Join-Path $nasdrive $config.copy.nasfolder.value
 
 $numerrors = 0
 
