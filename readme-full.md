@@ -7,8 +7,9 @@ It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy fi
 
 ## Links
 
-- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/roboshell-backup)
 - [Download page](https://bitbucket.org/christianspecht/roboshell-backup/downloads)
+- [Found a bug?](https://bitbucket.org/christianspecht/roboshell-backup/issues/new)
+- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/roboshell-backup)
 
 ---
 
