@@ -8,7 +8,7 @@ It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy fi
 ## Links
 
 - [Download page](https://bitbucket.org/christianspecht/roboshell-backup/downloads)
-- [Found a bug?](https://bitbucket.org/christianspecht/roboshell-backup/issues/new)
+- [Report a bug](https://bitbucket.org/christianspecht/roboshell-backup/issues/new)
 - [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/roboshell-backup)
 
 ---
@@ -66,6 +66,15 @@ Depending on your Windows version, this may already be the case (see below for m
 
 The installation of RoboShell Backup itself is easy, just run the setup.  
 When the installation has finished, the config file will automatically open in Notepad. You need to change the values in the config file once, according to your setup (which folders to backup, drive letters of your NAS and your USB drive).
+
+#### Updating an existing installation
+
+The setup will automatically detect the older version and update it.  
+**Note that it will overwrite the `config.xml` file, so you should backup the existing file before you run the setup.**  
+When the setup is finished, just overwrite the installed `config.xml` with your backed up version.  
+*(yes, [this is a bug](https://bitbucket.org/christianspecht/roboshell-backup/issue/4/setup-dont-repair-remove-config-file-if)...but you need to work around it until I figure out how to make the setup keep existing config files)*  
+
+#### Encrypt your USB drives
 
 As mentioned before, RoboShell Backup can write to [TrueCrypt](http://www.truecrypt.org/)-encrypted USB drives.  
 You don't need to install TrueCrypt on any of your machines - you just need to set up each USB drive once ([instructions and more information here](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/)). RoboShell Backup will then run TrueCrypt directly from the USB drive, in portable mode.
