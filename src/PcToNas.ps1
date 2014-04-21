@@ -76,10 +76,10 @@ start-sleep -s $waittime
 
 foreach ($node in $config.copy.sourcefolder)
 {
-    $parameters = @("/mir", "/xj", "/fft")
-    
-    $from = $node.from
-    $to = Join-Path $nasfolder $node.to   
-    
-    &robocopy.exe "$from" "$to" *.* $parameters
+	$parameters = @("/mir", "/xj", "/fft")
+	
+	$from = $node.from
+	$to = Join-Path $nasfolder $node.to   
+	
+	&robocopy.exe "$from" "$to" *.* $parameters
 }
