@@ -112,6 +112,7 @@ RoboShell Backup makes use of the following open source projects:
 
 ---
 
+<div id="license"></div>
 ### License
 
 RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://bitbucket.org/christianspecht/roboshell-backup/src/tip/src/License.rtf)** for details.

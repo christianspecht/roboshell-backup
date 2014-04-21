@@ -7,4 +7,5 @@ See [http://christianspecht.de/roboshell-backup](http://christianspecht.de/robos
 
 ### License
 
-RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://bitbucket.org/christianspecht/roboshell-backup/src/tip/src/License.rtf)** for details.
+RoboShell Backup is licensed under the [MIT License](http://christianspecht.de/roboshell-backup/#license).
+
