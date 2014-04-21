@@ -25,10 +25,16 @@
 	<!-- Destination folder on NAS (with backslash!) -->
 	<nasfolder value="Backup\MyComputer\"/>
 
-	<!-- List of folders to be copied from local machine to NAS -->
-	<!-- One line per folder -->
-	<!-- "from": complete path on local machine -->
-	<!-- "to": name of destination folder (subfolder of "nasfolder", see above) -->
+	<!--
+	List of folders to be copied from local machine to NAS
+	One line per folder
+		"from": complete path on local machine
+		"to": name of destination folder (subfolder of "nasfolder", see above)
+		"ignorefolders" (optional):
+			List of subfolders to ignore (will be used with Robocopy's /xd parameter).
+			Separate multiple folders with "|"
+			Example: ignorefolders="Folder1|Folder2"
+	-->
 	<sourcefolder from="C:\MyDocuments" to="MyDocuments"/>
 	
 	<!-- USB device drive letter (with backslash!) -->

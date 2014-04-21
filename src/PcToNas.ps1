@@ -81,5 +81,15 @@ foreach ($node in $config.copy.sourcefolder)
 	$from = $node.from
 	$to = Join-Path $nasfolder $node.to   
 	
+	if ($node.ignorefolders)
+	{
+		$parameters += "/xd"
+		
+		foreach ($folder in $node.ignorefolders.Split('|'))
+		{
+			$parameters += $folder
+		}
+	}
+	
 	&robocopy.exe "$from" "$to" *.* $parameters
 }
