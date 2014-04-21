@@ -1,4 +1,4 @@
-The "robot head" icon was created from scratch with OpenOffice Draw and converted into an .ico file with Junior Icon Editor (http://www.sibcode.com/junior-icon-editor/).
+The .ico file was created with Junior Icon Editor (http://www.sibcode.com/junior-icon-editor/)
 
 The ASCII logo was created with the Text Ascii Art Generator (http://patorjk.com/software/taag/), font "Standard".
 
