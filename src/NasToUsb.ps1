@@ -1,9 +1,6 @@
 $config = [xml](get-content .\Config.xml)
 
-if ($config.copy.showlogo.value -eq "1")
-{
-	.\logo
-}
+.\logo $config.copy.showlogo.value
 
 $nasdrive = $config.copy.nasdrive.value
 $usbdrive = $config.copy.usbdrive.value
