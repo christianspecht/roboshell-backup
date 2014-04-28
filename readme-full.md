@@ -64,10 +64,19 @@ So, making a backup doesn't take much time (except for the very first run, of co
 RoboShell Backup assumes that RoboCopy and Windows Powershell are both installed on your machine and in your `%PATH%` variable.  
 Depending on your Windows version, this may already be the case (see below for more information).
 
-The installation of RoboShell Backup itself is easy, just run the setup.  
-When the installation has finished, the config file will automatically open in Notepad. You need to change the values in the config file once, according to your setup (which folders to backup, drive letters of your NAS and your USB drive).
+There are two options to install RoboShell Backup:
 
-### Updating an existing installation
+1. **MSI installer**  
+    - Run the setup.
+    - When the installation has finished, the config file will automatically open in Notepad.
+2. **ZIP file**   
+    - Unzip to a folder of your choice.
+    - Open the config file (`config.xml`) by yourself.
+
+You need to change the values in the config file once, according to your setup (which folders to backup, drive letters of your NAS and your USB drive).
+
+
+### MSI installer: Updating an existing installation
 
 The setup will automatically detect the older version and update it.  
 **Note that it will overwrite the `config.xml` file, so you should backup the existing file before you run the setup.**  
@@ -93,13 +102,11 @@ So if you have at least XP SP2, it should be there. If it's not, you can get it 
 ## How to build?
 
 RoboShell Backup itself doesn't need to be built, because it consists just of batch files and PowerShell scripts.  
-The only thing that needs to be compiled is the MSI setup.
+The only thing that needs to be compiled is the MSI setup, which is made using [WiX](http://wixtoolset.org/).
 
-The setup is made using [WiX](http://wixtoolset.org/).  
-To build it, you need the WiX Toolkit installed on your machine. At the moment, we're using WiX 3.5 which you can download [here](http://wix.codeplex.com/releases/view/60102).
+The build script is the file `Create Setup.bat` in the main folder of the repository, and it will download WiX via NuGet *(the ["WiX Toolset (unofficial)"](http://www.nuget.org/packages/WiX.Toolset/) package)*.
 
-The build script is the file `Create Setup.bat` in the main folder of the repository, and it assumes that WiX is in your `%PATH%` variable.  
-In particular, the `bin` subfolder of the WiX installation path needs to be in your `%PATH%` variable, because the files used by the build script are located there.
+The script will create a zip file as well, using the [7-Zip Command Line Version](http://www.7-zip.org/download.html). It expects the `7za.exe` in the parent folder.
 
 ---
 
@@ -107,6 +114,7 @@ In particular, the `bin` subfolder of the WiX installation path needs to be in y
 
 RoboShell Backup makes use of the following open source projects:
 
+ - [NuGet](http://www.nuget.org/)
  - [TrueCrypt](http://www.truecrypt.org/)
  - [WiX](http://wixtoolset.org/)
 
