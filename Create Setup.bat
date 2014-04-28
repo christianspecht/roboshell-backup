@@ -2,6 +2,8 @@
 
 rem set version number (see batch file for more details)
 call wix\version-number.bat
+echo %productversion% > src\version.txt
+
 
 del /q /s release\*.*
 

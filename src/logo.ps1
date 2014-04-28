@@ -19,6 +19,11 @@ else
 	"RoboShell Backup"
 }
 
-""
+if (test-path version.txt)
+{
+	$version = get-content "version.txt"
+	"v" + $version
+}
+
 "http://christianspecht.de/roboshell-backup/"
 ""

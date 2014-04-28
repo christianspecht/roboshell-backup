@@ -80,6 +80,9 @@
 			<Component Id='LogoPS1' Guid='{F2A5251F-4846-40AD-AFE8-2C6AE0A9EEF3}'>
 				<File Id='LogoPS1' Name='logo.ps1' DiskId='1' Source='src\logo.ps1' KeyPath='yes' />
 			</Component>
+			<Component Id='VersionTxt' Guid='{E7F2F879-3DD3-4bd9-A06C-12119ACCAD2C}'>
+				<File Id='VersionTxt' Name='version.txt' DiskId='1' Source='src\version.txt' KeyPath='yes' />
+			</Component>
 		</DirectoryRef>
 		
 		<DirectoryRef Id='DE'>
@@ -100,6 +103,7 @@
 			<ComponentRef Id='PcToNasPS1' />
 			<ComponentRef Id='Readme' />
 			<ComponentRef Id='LogoPS1' />
+			<ComponentRef Id='VersionTxt' />
 		</Feature>
 		
 		<InstallExecuteSequence>

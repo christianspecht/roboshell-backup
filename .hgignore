@@ -4,3 +4,4 @@ syntax: glob
 *.msi
 release
 packages
+version.txt
