@@ -7,9 +7,15 @@ del /q release\*.*
 
 rem MSI
 
-candle wix\roboshell-backup.wxs
+rem install WiX if it's missing
+set nugetpath=%~dp0\packages
+%nugetpath%\nuget restore %nugetpath%\packages.config -PackagesDirectory %nugetpath%
 
-light -ext WixUIExtension roboshell-backup.wixobj  -out release\msi\roboshell-backup-%productversion%.msi
+set wixpath=%nugetpath%\WiX.Toolset.3.8.1128.0\tools\wix
+
+%wixpath%\candle wix\roboshell-backup.wxs
+
+%wixpath%\light -ext WixUIExtension roboshell-backup.wixobj  -out release\msi\roboshell-backup-%productversion%.msi
 
 
 rem ZIP
