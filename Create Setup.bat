@@ -11,17 +11,17 @@ rem MSI
 
 rem install WiX if it's missing
 set nugetpath=%~dp0\packages
-%nugetpath%\nuget restore %nugetpath%\packages.config -PackagesDirectory %nugetpath%
+call "%nugetpath%\nuget.exe" restore "%nugetpath%\packages.config" -PackagesDirectory "%nugetpath%"
 
 set wixpath=%nugetpath%\WiX.Toolset.3.8.1128.0\tools\wix
 
-%wixpath%\candle wix\roboshell-backup.wxs
+"%wixpath%\candle.exe" wix\roboshell-backup.wxs
 
-%wixpath%\light -ext WixUIExtension roboshell-backup.wixobj  -out release\msi\roboshell-backup-%productversion%.msi
+"%wixpath%\light.exe" -ext WixUIExtension roboshell-backup.wixobj  -out release\msi\roboshell-backup-%productversion%.msi
 
 
 rem ZIP
-%~dp0\..\7za.exe a -tzip release\zip\roboshell-backup-%productversion%.zip @zipfiles.txt
+"%~dp0\..\7za.exe" a -tzip release\zip\roboshell-backup-%productversion%.zip @zipfiles.txt
 
 
 pause
