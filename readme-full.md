@@ -41,7 +41,7 @@ RoboShell Backup consists of two batch files:
 
 - `PcToNas.bat` copies folders from your local machine to a NAS drive.  
 You can  specify in the `config.xml` file:  
-  - the local folders to be copied *(and subfolders to be ignored)*
+  - the local folders to be copied *(and subfolders/files to be ignored)*
   - the drive letter of the NAS drive
   - the name of the destination folder on the NAS drive
 - `NasToUsb.bat` backups the whole NAS drive to an external USB drive  

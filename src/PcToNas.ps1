@@ -87,6 +87,16 @@ foreach ($node in $config.copy.sourcefolder)
 			$parameters += $folder
 		}
 	}
+
+	if ($node.ignorefiles)
+	{
+		$parameters += "/xf"
+		
+		foreach ($file in $node.ignorefiles.Split('|'))
+		{
+			$parameters += $file
+		}
+	}
 	
 	&robocopy.exe "$from" "$to" *.* $parameters
 }

@@ -34,6 +34,10 @@
 			List of subfolders to ignore (will be used with Robocopy's /xd parameter).
 			Separate multiple folders with "|"
 			Example: ignorefolders="Folder1|Folder2"
+		"ignorefiles" (optional):
+			List of files to ignore (will be used with Robocopy's /xf parameter).
+			Separate multiple files with "|"
+			Example: ignorefiles="File1.txt|*.pdf"
 	-->
 	<sourcefolder from="C:\MyDocuments" to="MyDocuments"/>
 	
