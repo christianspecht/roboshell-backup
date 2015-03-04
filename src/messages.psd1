@@ -1,4 +1,4 @@
-ConvertFrom-StringData @"
+﻿ConvertFrom-StringData @"
 	noNasDrive = NAS drive {0} does not exist!
 	noUsbDrive = USB drive {0} does not exist!
 	noBackupN = Backup to NAS will not run!

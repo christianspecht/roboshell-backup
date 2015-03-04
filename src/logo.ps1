@@ -1,4 +1,4 @@
-param($showlogo)
+﻿param($showlogo)
 
 if ($showlogo -eq "1")
 {

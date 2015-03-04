@@ -1,4 +1,4 @@
-$config = [xml](get-content .\Config.xml)
+﻿$config = [xml](get-content .\Config.xml)
 
 .\logo $config.copy.showlogo.value
 
