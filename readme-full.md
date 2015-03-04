@@ -45,7 +45,7 @@ You can  specify in the `config.xml` file:
   - the drive letter of the NAS drive
   - the name of the destination folder on the NAS drive
 - `NasToUsb.bat` backups the whole NAS drive to an external USB drive  
-(which can be encrypted with [TrueCrypt](http://www.truecrypt.org/)).  
+(which can be encrypted with [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt)).  
 You can specify in the `config.xml` file:
   - the drive letter of the USB drive
   - settings for TrueCrypt (optional)  
@@ -85,8 +85,16 @@ When the setup is finished, just overwrite the installed `config.xml` with your 
 
 ### Encrypt your USB drives
 
-As mentioned before, RoboShell Backup can write to [TrueCrypt](http://www.truecrypt.org/)-encrypted USB drives.  
+As mentioned before, RoboShell Backup can write to [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt)-encrypted USB drives.  
 You don't need to install TrueCrypt on any of your machines - you just need to set up each USB drive once ([instructions and more information here](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/)). RoboShell Backup will then run TrueCrypt directly from the USB drive, in portable mode.
+
+> ### Please note:
+> 
+> Development of TrueCrypt [stopped in May 2014](http://en.wikipedia.org/wiki/TrueCrypt#End_of_life_announcement). The only version still available on the [official TrueCrypt website](http://truecrypt.sourceforge.net/) *(version 7.2)* supports *de*cryption only, therefore it's not suited for usage with RoboShell Backup.
+>
+> &nbsp;
+>
+> For more information about TrueCrypt's current status as well as an article about whether it's still secure *(it is!)*, and to download TrueCrypt 7.1a *(the version RoboShell Backup's integration was developed and tested with)*, see the [TrueCrypt Final Release Repository](https://www.grc.com/misc/truecrypt/truecrypt.htm).
 
 ### How to get RoboCopy and PowerShell
 
