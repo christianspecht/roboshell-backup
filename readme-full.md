@@ -137,6 +137,6 @@ RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://
 
 ### Project Info
 
-<script type="text/javascript" src="http://www.ohloh.net/p/583937/widgets/project_basic_stats.js"></script>  
-<script type="text/javascript" src="http://www.ohloh.net/p/583937/widgets/project_languages.js"></script>
+<script type='text/javascript' src='https://www.openhub.net/p/roboshell-backup/widgets/project_basic_stats?format=js'></script>
+<script type='text/javascript' src='https://www.openhub.net/p/roboshell-backup/widgets/project_languages?format=js'></script>
 
