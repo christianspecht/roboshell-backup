@@ -45,11 +45,11 @@ You can  specify in the `config.xml` file:
   - the drive letter of the NAS drive
   - the name of the destination folder on the NAS drive
 - `NasToUsb.bat` backups the whole NAS drive to an external USB drive  
-(which can be encrypted with [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt)).  
+(which can be encrypted with [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt) / [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt)).  
 You can specify in the `config.xml` file:
   - the drive letter of the USB drive
-  - settings for TrueCrypt (optional)  
-*(If enabled, RoboShell Backup will automatically mount and dismount your TrueCrypt volume - [read more about how to set this up](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/))*
+  - settings for TrueCrypt/VeraCrypt (optional)  
+*(If enabled, RoboShell Backup will automatically mount and dismount your TrueCrypt/VeraCrypt volume - read more about how to set this up for [TrueCrypt](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/) / [VeraCrypt](http://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/))*
 
 The idea is that you run `PcToNas.bat` regularly on each of your machines (by putting it into your Startup folder, for example), so that all your important data is always on your NAS drive, including the local stuff from each machine.  
 Then, every time you feel like taking a complete backup of your NAS, you plug an external USB drive to any of your machines and run `NasToUsb.bat` to copy the whole NAS on the USB drive.
@@ -85,8 +85,9 @@ When the setup is finished, just overwrite the installed `config.xml` with your 
 
 ### Encrypt your USB drives
 
-As mentioned before, RoboShell Backup can write to [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt)-encrypted USB drives.  
-You don't need to install TrueCrypt on any of your machines - you just need to set up each USB drive once ([instructions and more information here](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/)). RoboShell Backup will then run TrueCrypt directly from the USB drive, in portable mode.
+As mentioned before, RoboShell Backup can write to [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt)- and [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt)-encrypted USB drives.  
+You don't need to install TrueCrypt/VeraCrypt on any of your machines - you just need to set up each USB drive once *(see the following links for instructions and more information for [TrueCrypt](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/) and [VeraCrypt](http://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/))*.  
+RoboShell Backup will then run the respective encryption tool directly from the USB drive, in portable mode.
 
 > ### Please note:
 > 
@@ -95,6 +96,10 @@ You don't need to install TrueCrypt on any of your machines - you just need to s
 > &nbsp;
 >
 > For more information about TrueCrypt's current status as well as an article about whether it's still secure *(it is!)*, and to download TrueCrypt 7.1a *(the version RoboShell Backup's integration was developed and tested with)*, see the [TrueCrypt Final Release Repository](https://www.grc.com/misc/truecrypt/truecrypt.htm).
+>
+> &nbsp;
+>
+> [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt) is a fork of the last TrueCrypt version with additional security fixes.
 
 ### How to get RoboCopy and PowerShell
 
@@ -124,6 +129,7 @@ RoboShell Backup makes use of the following open source projects:
 
  - [NuGet](http://www.nuget.org/)
  - [TrueCrypt](http://www.truecrypt.org/)
+ - [VeraCrypt](https://www.veracrypt.fr)
  - [WiX](http://wixtoolset.org/)
 
 ---
