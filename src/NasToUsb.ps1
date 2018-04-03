@@ -143,7 +143,7 @@ else
 	read-host $msg.pressEnter1
 }
 
-robocopy.exe "$nasdrive" "$usbfolder" *.* /mir /fft
+robocopy.exe "$nasdrive" "$usbfolder" *.* /mir /fft /dst
 
 if ($truecrypt.enabled -eq "1")
 {
