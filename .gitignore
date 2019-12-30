@@ -1,0 +1,7 @@
+syntax: glob
+*.wixobj
+*.wixpdb
+*.msi
+release
+packages
+version.txt

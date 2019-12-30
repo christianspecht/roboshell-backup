@@ -1,15 +1,15 @@
-![logo](https://bitbucket.org/christianspecht/roboshell-backup/raw/tip/img/logo128x128.png)
+![logo](https://raw.githubusercontent.com/christianspecht/roboshell-backup/master/img/logo128x128.png)
 
 RoboShell Backup is a simple personal backup tool.  
-It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy files, and it is written in [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell).
+It uses Microsoft's [RoboCopy](https://en.wikipedia.org/wiki/Robocopy) to copy files, and it is written in [PowerShell](https://en.wikipedia.org/wiki/PowerShell).
 
 ---
 
 ## Links
 
-- [Download page](https://bitbucket.org/christianspecht/roboshell-backup/downloads)
-- [Report a bug](https://bitbucket.org/christianspecht/roboshell-backup/issues/new)
-- [Main Project page on Bitbucket](https://bitbucket.org/christianspecht/roboshell-backup)
+- [Download page](https://github.com/christianspecht/roboshell-backup/releases)
+- [Report a bug](https://github.com/christianspecht/roboshell-backup/issues/new)
+- [Main Project page on GitHub](https://github.com/christianspecht/roboshell-backup)
 
 ---
 
@@ -49,7 +49,7 @@ You can  specify in the `config.xml` file:
 You can specify in the `config.xml` file:
   - the drive letter of the USB drive
   - settings for TrueCrypt/VeraCrypt (optional)  
-*(If enabled, RoboShell Backup will automatically mount and dismount your TrueCrypt/VeraCrypt volume - read more about how to set this up for [TrueCrypt](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/) / [VeraCrypt](http://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/))*
+*(If enabled, RoboShell Backup will automatically mount and dismount your TrueCrypt/VeraCrypt volume - read more about how to set this up for [TrueCrypt](https://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/) / [VeraCrypt](https://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/))*
 
 The idea is that you run `PcToNas.bat` regularly on each of your machines (by putting it into your Startup folder, for example), so that all your important data is always on your NAS drive, including the local stuff from each machine.  
 Then, every time you feel like taking a complete backup of your NAS, you plug an external USB drive to any of your machines and run `NasToUsb.bat` to copy the whole NAS on the USB drive.
@@ -81,17 +81,17 @@ You need to change the values in the config file once, according to your setup (
 The setup will automatically detect the older version and update it.  
 **Note that it will overwrite the `config.xml` file, so you should backup the existing file before you run the setup.**  
 When the setup is finished, just overwrite the installed `config.xml` with your backed up version.  
-*(yes, [this is a bug](https://bitbucket.org/christianspecht/roboshell-backup/issue/4/setup-dont-repair-remove-config-file-if)...but you need to work around it until I figure out how to make the setup keep existing config files)*  
+*(yes, [this is a bug](https://github.com/christianspecht/roboshell-backup/issues/4)...but you need to work around it until I figure out how to make the setup keep existing config files)*  
 
 ### Encrypt your USB drives
 
-As mentioned before, RoboShell Backup can write to [TrueCrypt](http://en.wikipedia.org/wiki/TrueCrypt)- and [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt)-encrypted USB drives.  
-You don't need to install TrueCrypt/VeraCrypt on any of your machines - you just need to set up each USB drive once *(see the following links for instructions and more information for [TrueCrypt](http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/) and [VeraCrypt](http://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/))*.  
+As mentioned before, RoboShell Backup can write to [TrueCrypt](https://en.wikipedia.org/wiki/TrueCrypt)- and [VeraCrypt](https://en.wikipedia.org/wiki/VeraCrypt)-encrypted USB drives.  
+You don't need to install TrueCrypt/VeraCrypt on any of your machines - you just need to set up each USB drive once *(see the following links for instructions and more information for [TrueCrypt](https://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/) and [VeraCrypt](https://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/))*.  
 RoboShell Backup will then run the respective encryption tool directly from the USB drive, in portable mode.
 
 > ### Please note:
 > 
-> Development of TrueCrypt [stopped in May 2014](http://en.wikipedia.org/wiki/TrueCrypt#End_of_life_announcement). The only version still available on the [official TrueCrypt website](http://truecrypt.sourceforge.net/) *(version 7.2)* supports *de*cryption only, therefore it's not suited for usage with RoboShell Backup.
+> Development of TrueCrypt [stopped in May 2014](https://en.wikipedia.org/wiki/TrueCrypt#End_of_life_announcement). The only version still available on the [official TrueCrypt website](http://truecrypt.sourceforge.net/) *(version 7.2)* supports *de*cryption only, therefore it's not suited for usage with RoboShell Backup.
 >
 > &nbsp;
 >
@@ -105,21 +105,21 @@ RoboShell Backup will then run the respective encryption tool directly from the 
 
 RoboCopy will be on your machine and in your `%PATH%` variable if you have at least Windows Vista (because it's included in the standard installation)  
 If your have Windows XP or older, you need the Windows Resource Kit for your Windows version (RoboCopy is part of the Resource Kit).  
-Links to the downloads are on the bottom of the [Resource Kit's Wikipedia page](http://en.wikipedia.org/wiki/Windows_Resource_Kit).
+Links to the downloads are on the bottom of the [Resource Kit's Wikipedia page](https://en.wikipedia.org/wiki/Windows_Resource_Kit).
 
 Windows PowerShell is part of all Windows versions since Windows XP SP2.  
-So if you have at least XP SP2, it should be there. If it's not, you can get it [here](http://www.microsoft.com/powershell).
+So if you have at least XP SP2, it should be there. If it's not, you can get it [here](https://www.microsoft.com/powershell).
 
 ---
 
 ## How to build?
 
 RoboShell Backup itself doesn't need to be built, because it consists just of batch files and PowerShell scripts.  
-The only thing that needs to be compiled is the MSI setup, which is made using [WiX](http://wixtoolset.org/).
+The only thing that needs to be compiled is the MSI setup, which is made using [WiX](https://wixtoolset.org/).
 
-The build script is the file `Create Setup.bat` in the main folder of the repository, and it will download WiX via NuGet *(the ["WiX Toolset (unofficial)"](http://www.nuget.org/packages/WiX.Toolset/) package)*.
+The build script is the file `Create Setup.bat` in the main folder of the repository, and it will download WiX via NuGet *(the ["WiX Toolset (unofficial)"](https://www.nuget.org/packages/WiX.Toolset/) package)*.
 
-The script will create a zip file as well, using the [7-Zip Command Line Version](http://www.7-zip.org/download.html). It expects the `7za.exe` in the parent folder.
+The script will create a zip file as well, using the [7-Zip Command Line Version](https://www.7-zip.org/download.html). It expects the `7za.exe` in the parent folder.
 
 ---
 
@@ -127,17 +127,17 @@ The script will create a zip file as well, using the [7-Zip Command Line Version
 
 RoboShell Backup makes use of the following open source projects:
 
- - [NuGet](http://www.nuget.org/)
+ - [NuGet](https://www.nuget.org/)
  - [TrueCrypt](http://www.truecrypt.org/)
  - [VeraCrypt](https://www.veracrypt.fr)
- - [WiX](http://wixtoolset.org/)
+ - [WiX](https://wixtoolset.org/)
 
 ---
 
 <div id="license"></div>
 ### License
 
-RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://bitbucket.org/christianspecht/roboshell-backup/src/tip/src/License.rtf)** for details.
+RoboShell Backup is licensed under the MIT License. See **[License.rtf](https://github.com/christianspecht/roboshell-backup/raw/master/src/License.rtf)** for details.
 
 ---
 

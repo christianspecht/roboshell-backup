@@ -1,11 +1,11 @@
 # RoboShell Backup
 
 RoboShell Backup is a simple personal backup tool.  
-It uses Microsoft's [RoboCopy](http://en.wikipedia.org/wiki/Robocopy) to copy files, and it is written in [Windows PowerShell](http://en.wikipedia.org/wiki/Windows_PowerShell).
+It uses Microsoft's [RoboCopy](https://en.wikipedia.org/wiki/Robocopy) to copy files, and it is written in [PowerShell](https://en.wikipedia.org/wiki/PowerShell).
 
-See [http://christianspecht.de/roboshell-backup](http://christianspecht.de/roboshell-backup) for more information.
+See [https://christianspecht.de/roboshell-backup](https://christianspecht.de/roboshell-backup) for more information.
 
 ### License
 
-RoboShell Backup is licensed under the [MIT License](http://christianspecht.de/roboshell-backup/#license).
+RoboShell Backup is licensed under the [MIT License](https://christianspecht.de/roboshell-backup/#license).
 
