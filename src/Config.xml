@@ -13,7 +13,7 @@
 	#	You can also open this file from the Start Menu later.
 	#
 	#	See the project site for more information:
-	#	http://christianspecht.de/roboshell-backup
+	#	https://christianspecht.de/roboshell-backup
 	#
 	###############################################################################
 	
@@ -54,8 +54,8 @@
 	TrueCrypt/VeraCrypt settings, to enable RoboShell Backup to write to an TrueCrypt-/VeraCrypt-encrypted USB drive (both are free and open source)
 	You have to set up each USB drive once in order for this to work.
 	Read this for more instructions:
-	- TrueCrypt: http://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/
-	- VeraCrypt: http://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/
+	- TrueCrypt: https://christianspecht.de/2012/04/30/roboshell-backup-1-1-now-with-truecrypt-integration/
+	- VeraCrypt: https://christianspecht.de/2018/01/07/veracrypt-integration-for-roboshell-backup/
 	If you don't want to encrypt your USB drive, just don't touch these settings.
 	
 	Values:

@@ -25,5 +25,5 @@ if (test-path version.txt)
 	"v" + $version
 }
 
-"http://christianspecht.de/roboshell-backup/"
+"https://christianspecht.de/roboshell-backup/"
 ""
